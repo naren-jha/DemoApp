@@ -78,6 +78,9 @@ curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
 
 ## Run multiple instances of the app
 `cd target`
+
 `java -jar demo-0.0.1-SNAPSHOT.jar` on default port 8080
+
 `java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8081`
+
 `java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8082`
