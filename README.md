@@ -26,16 +26,12 @@ spring:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/student
-    username:
-    password:
+    username: root
+    password: root1234
   jpa:
     hibernate:
       ddl-auto: 'create-drop'
     show-sql: true
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
 ```
 
 ## Curl
