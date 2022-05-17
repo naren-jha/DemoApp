@@ -33,6 +33,13 @@ spring:
       ddl-auto: 'create-drop'
     show-sql: true
 ```
+Replace postgresql dependency with mysql dependency to change the database
+```javascript
+<dependency>
+  <groupId>mysql</groupId>
+  <artifactId>mysql-connector-java</artifactId>
+</dependency>
+```
 
 ## Curl
 **Create:**
