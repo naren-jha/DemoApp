@@ -75,3 +75,6 @@ curl --location --request PUT 'localhost:8080/api/v1/student/2?name=Joe&email=jo
 curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
 --data-raw ''
 ```
+
+## Run multiple instances of the app
+`cd target`
