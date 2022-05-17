@@ -1,1 +1,77 @@
 # DemoApp
+
+* https://youtu.be/9SGDpanrc8U
+
+## Database configs
+
+**PostgreSQL config**
+```javascript
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/student
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+```
+
+**MySql config**
+```javascript
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/student
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+```
+
+## Curl
+**Create:**
+```javascript
+curl --location --request POST 'localhost:8080/api/v1/student/' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Joe Goldberg",
+    "email": "joeg@gmail.com",
+    "age": 25,
+    "dob": "2001-06-20"
+}'
+```
+
+**Get:**
+```javascript
+curl --location --request GET 'localhost:8080/api/v1/student/'
+```
+
+```javascript
+curl --location --request GET 'localhost:8080/api/v1/student/1'
+```
+
+**Update:**
+```javascript
+curl --location --request PUT 'localhost:8080/api/v1/student/2?name=Joe&email=joeg2@gmail.com' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Joe Goldberg",
+    "email": "joeg1@gmail.com"
+}'
+```
+
+**Delete:**
+```javascript
+curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
+--data-raw ''
+```
