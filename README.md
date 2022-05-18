@@ -33,7 +33,7 @@ spring:
       ddl-auto: 'create-drop'
     show-sql: true
 ```
-Replace postgresql dependency with mysql dependency to change the database
+Also, replace postgresql dependency with mysql dependency when changing the database
 ```javascript
 <dependency>
   <groupId>mysql</groupId>
