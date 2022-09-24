@@ -2,6 +2,7 @@
 
 * https://youtu.be/9SGDpanrc8U
 * JUnit: https://youtu.be/Geq60OVyBPg?t=1479
+* assertj: https://www.baeldung.com/introduction-to-assertj
 
 ## Database configs
 
