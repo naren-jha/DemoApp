@@ -68,10 +68,7 @@ curl --location --request GET 'localhost:8080/api/v1/student/1'
 ```javascript
 curl --location --request PUT 'localhost:8080/api/v1/student/2?name=Joe&email=joeg2@gmail.com' \
 --header 'Content-Type: application/json' \
---data-raw '{
-    "name": "Joe Goldberg",
-    "email": "joeg1@gmail.com"
-}'
+--data-raw ''
 ```
 
 **Delete:**
