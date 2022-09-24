@@ -1,7 +1,6 @@
 package com.njha.student;
 
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +13,12 @@ public class StudentController {
 
     private final StudentService studentService;
 
+    @PostMapping
+    public ResponseEntity<String> registerStudent(@RequestBody Student student) {
+        studentService.addStudent(student);
+        return ResponseEntity.ok("Student created successfully!");
+    }
+
     @GetMapping
     public ResponseEntity<List<Student>> getStudents() {
         List<Student> students = studentService.getStudents();
@@ -24,12 +29,6 @@ public class StudentController {
     public ResponseEntity<Student> getStudentById(@PathVariable("studentId") Long studentId) {
         Student student = studentService.getStudentById(studentId);
         return ResponseEntity.ok(student);
-    }
-
-    @PostMapping
-    public ResponseEntity<String> registerStudent(@RequestBody Student student) {
-        studentService.addStudent(student);
-        return ResponseEntity.ok("Student created successfully!");
     }
 
     @DeleteMapping("/{studentId}")

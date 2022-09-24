@@ -1,6 +1,7 @@
 package com.njha.student;
 
 import lombok.AllArgsConstructor;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -46,13 +47,11 @@ public class StudentService {
         Student student = studentRepository.findById(studentId)
                 .orElseThrow(() -> new IllegalStateException("Student by id " + studentId + " does not exist!"));
 
-        if (name != null && name.length() > 0 &&
-                !student.getName().equals(name)) {
+        if (Strings.isNotBlank(name) && !student.getName().equals(name)) {
             student.setName(name);
         }
 
-        if (email != null && email.length() > 0 &&
-                !student.getEmail().equals(email)) {
+        if (Strings.isNotBlank(email) && !student.getEmail().equals(email)) {
             Optional<Student> studentOptional = studentRepository.findStudentByEmail(email);
             if (studentOptional.isPresent()) {
                 throw new IllegalStateException("Email taken!");
