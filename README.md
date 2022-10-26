@@ -86,3 +86,8 @@ curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
 `java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8081`
 
 `java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8082`
+
+
+## Using RestTemplate to call other services
+* https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
+* https://www.baeldung.com/rest-template
