@@ -88,9 +88,20 @@ curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
 `java -jar demo-0.0.1-SNAPSHOT.jar --server.port=8082`
 
 
-## Using RestTemplate to call other services
+## Using RestTemplate
+Synchronous client to perform HTTP requests, exposing a simple, template method API over underlying HTTP client libraries such as the JDK HttpURLConnection, Apache HttpComponents, and others.
+
+* https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/client/RestTemplate.html
 * https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
 * https://www.baeldung.com/rest-template
 
+## Using WebClinet
+Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.
+
+* https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html
+* https://www.baeldung.com/spring-5-webclient
+* https://reflectoring.io/spring-webclient/
+
 ## RestTemplate vs WebClinet
 * https://www.baeldung.com/spring-webclient-resttemplate
+* https://stackoverflow.com/questions/47974757/webclient-vs-resttemplate
