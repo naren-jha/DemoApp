@@ -91,3 +91,6 @@ curl --location --request DELETE 'localhost:8080/api/v1/student/1' \
 ## Using RestTemplate to call other services
 * https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
 * https://www.baeldung.com/rest-template
+
+## RestTemplate vs WebClinet
+* https://www.baeldung.com/spring-webclient-resttemplate
