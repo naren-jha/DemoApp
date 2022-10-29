@@ -95,13 +95,13 @@ Synchronous client to perform HTTP requests, exposing a simple, template method 
 * https://howtodoinjava.com/spring-boot2/resttemplate/spring-restful-client-resttemplate-example/
 * https://www.baeldung.com/rest-template
 
-## Using WebClinet
+## Using WebClient
 Non-blocking, reactive client to perform HTTP requests, exposing a fluent, reactive API over underlying HTTP client libraries such as Reactor Netty.
 
 * https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/reactive/function/client/WebClient.html
 * https://www.baeldung.com/spring-5-webclient
 * https://reflectoring.io/spring-webclient/
 
-## RestTemplate vs WebClinet
+## RestTemplate vs WebClient
 * https://www.baeldung.com/spring-webclient-resttemplate
 * https://stackoverflow.com/questions/47974757/webclient-vs-resttemplate
